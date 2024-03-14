@@ -1,35 +1,29 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Change Outside Div Color on Hover</title>
 	<style>
-	  .outside {
-		background-color: blue; /* Default background color */
-		padding: 20px;
-		transition: background-color 0.3s ease;
-	  }
-	
-	  .inside {
-		padding: 10px;
-		background-color: lightgray;
-		cursor: pointer;
-	  }
+
+		/* Setting clamp property of heading */
+		h1 {
+			/* font-size: clamp(2rem, 4vw, 4rem); */
+			color: #eb4034;
+		}
+
+		/* Setting clamp property of box */
+		.box {
+			width: clamp(500px, 80%, 900px);
+			height: 8rem;
+			background: #5f76e8;
+		}
 	</style>
-	</head>
-	<body>
-	<div class="outside" id="outsideDiv" onmouseout="resetColor()">
-	  <div class="inside" onmouseover="changeColor()">Hover over me</div>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Welcome To GFG</h1>
+		<div class="box"></div>
 	</div>
-	
-	<script>
-	function changeColor() {
-	  document.getElementById("outsideDiv").style.backgroundColor = "red";
-	}
-	
-	function resetColor() {
-	  document.getElementById("outsideDiv").style.backgroundColor = "blue";
-	}
-	</script>
-	
-	</body>
-	</html>
+</body>
+
+</html>

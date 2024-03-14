@@ -23,7 +23,8 @@ a:hover{
 }
 
 #wrapper{
-    margin: 0 21.5rem;
+    width: 60%;
+    margin: 0 auto;
 }
 
 
@@ -178,7 +179,7 @@ button:hover{
 /* ---------------------- favorites ---------------------- */
 
 #favorites {
-    padding: 7rem 0;
+    padding-top: 7rem;
 }
 
 #favorites .content {
@@ -188,7 +189,7 @@ button:hover{
 #favorites .content .headpart {
     display: flex;
     justify-content: space-between;
-    margin:2rem 0;
+    margin-bottom:2rem;
     color: #09357a;
 }
 
@@ -221,7 +222,6 @@ button:hover{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: aquamarine;
     gap: 10px;
 }
 
@@ -230,14 +230,13 @@ button:hover{
     display: flex;
     justify-content: space-between;
     /* background-color: beige; */
-    border: 1px solid black;
 
 }
 
 #favorites .content .mainpart ul li .fullcontent{
     width: 100%;
     /* height: 500px; */
-    background-color: black;
+    /* background-color: black; */
 }
 
 #favorites .content .mainpart ul li .fullcontent .favbackground {
@@ -300,7 +299,7 @@ button:hover{
 
 #favorites .content .mainpart ul li .favimage {
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 #favorites .content .mainpart ul li .favimage img {
@@ -310,7 +309,7 @@ button:hover{
 
 /*  -------------------------- legacy ---------------------------- */
 #legacy {
-    padding: 0;
+    padding-top: 7rem;
 }
 
 #legacy .legacycontent {
@@ -339,8 +338,8 @@ button:hover{
   
 #legacy .legacycontent div h3 {
     color: #09357a;
-    font-size: clamp(12px, 4vw, 40px);
-    /* font-size: 40px; */
+    /* font-size: clamp(12px, 4vw, 40px); */
+    font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -559,26 +558,30 @@ button:hover{
     font-size: 14px;
 
 }
+#footer .footercontent .bottompart .rightside{
+    display: flex;
+    justify-content: space-between;
+}
   
-#footer .footercontent .bottompart .bottominfo {
-    width: 35%;
+#footer .footercontent .bottompart .rightside .bottominfo {
+    width: 60%;
     text-align: center;
     font-size: 14px;
 }
   
-#footer .footercontent .bottompart .bottominfo p {
+#footer .footercontent .bottompart .rightside .bottominfo p {
     font-family: sans-serif;
     font-weight: 100;
     font-size: 14px;
 }
   
-#footer .footercontent .bottompart .copyright {
-    /* width: 11%; */
+#footer .footercontent .bottompart .rightside .copyright {
+    width: 30%;
     display: flex;
     justify-content:right;
 }
 
-#footer .footercontent .bottompart .copyright p {
+#footer .footercontent .bottompart .rightside .copyright p {
     font-family: sans-serif;
     font-weight: 100;
 
@@ -586,17 +589,10 @@ button:hover{
 
 /* -------------------- responsive for 1440 px -----------------------  */
 
-@media (max-width:1700px) {
-    #wrapper{
-        margin: 0 14rem;
-    }
-
-}
-
 
 @media (max-width:1440px) {
     #wrapper{
-        margin: 0 12rem;
+        width: 80%;
     }
     .btn1{
         padding: .7rem 2rem;
@@ -712,7 +708,7 @@ button:hover{
 }
 @media (max-width:1280px) {
     #wrapper{
-        margin: 0 8rem;
+        width: 90%;
     }
 
 
@@ -744,6 +740,10 @@ button:hover{
 
     /* ----------------- favorites resnponsive 1280px ---------------------- */
 
+    #favorites{
+        padding-top: 5rem;
+    }
+
     #favorites .content .mainpart ul li .fullcontent .favbackground .favstar {
         margin-bottom: 10px;
     }
@@ -768,9 +768,9 @@ button:hover{
 }
 
 @media (max-width:1080px) {
-    #wrapper{
+    /* #wrapper{
         margin: 0 4rem;
-    }
+    } */
 
 
     /* ------------------ main in responsive 1080px ---------------- */
@@ -797,13 +797,73 @@ button:hover{
     }
 
 
+    /* ------------------ favorites responsive 1080px ----------------- */
+
+    #favorites {
+        padding-top: 4rem;
+    }
+/* 
+    #favorites .content .headpart h3 {
+        font-size: 23px;
+        font-weight: 500;
+    }
+    #favorites .content .mainpart ul li {
+        width: 33%;
+    }
+
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  h5 {
+        font-size: 18px;
+    }
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  p {
+        font-size: 15px;
+    }
+
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  .favstar i {
+        font-size: 15px;
+    }
+    #favorites .content .mainpart ul li button {
+        border: 2px solid;
+        font-size: 13px
+    }
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  .favstar {
+        margin-bottom: 10px;
+    } */
+
+
+
+    /* ---------------legacy responsive 1080px -------------------- */
+
+    #legacy {
+        padding-top: 4rem;
+    }
+    /* #legacy .legacycontent .legacyimage {
+        margin-right: 2.2rem;
+    } */
+
+    #legacy .legacycontent div h3 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    #legacy .legacycontent div p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom:20px;
+
+    }
+    #legacy .legacycontent div a {
+        font-size: 13px;
+        padding: 14px 35px;
+    }
+    
+
+
 
 }
 
 @media (max-width:980px) {
-    #wrapper{
+    /* #wrapper{
         margin: 0 1.1rem;
-    }
+    } */
 
 
     /* -------------hamsburg ------------------ */
@@ -839,41 +899,99 @@ button:hover{
     /* ------------------ favorites responsive 980px ----------------- */
 
     #favorites {
-        padding: 1rem 0;
+        padding-top: 3rem;
     }
 
     #favorites .content .headpart h3 {
-        font-size: 20px;
+        font-size: 23px;
         font-weight: 500;
     }
     #favorites .content .mainpart ul li {
         width: 33%;
     }
-    #favorites .content .mainpart ul li .fullcontent .favbackground .favstar {
-        margin-bottom: 10px;
-    }
-    #favorites .content .mainpart ul li .fullcontent .favbackground .favstar i{
-        font-size: 2px;
-    }
-    #favorites .content .mainpart ul li .fullcontent .favbackground h5 {
+
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  h5 {
         font-size: 18px;
     }
-
-    #favorites .content .mainpart ul li .fullcontent .favbackground p {
-        font-size: 14px;
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  p {
+        font-size: 15px;
     }
-    #favorites .content .mainpart ul li .fullcontent .favbackground .favstar i {
 
-        font-size: 14px;
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  .favstar i {
+        font-size: 15px;
     }
     #favorites .content .mainpart ul li button {
-        padding: 5px 10px;
+        border: 2px solid;
+        font-size: 13px
+    }
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  .favstar {
+        margin-bottom: 10px;
+    }
+
+
+
+    /* ---------------legacy responsive 980px -------------------- */
+
+    #legacy {
+        padding-top: 3rem;
+    }
+    #legacy .legacycontent .legacyimage {
+        margin-right: 2rem;
+    }
+
+    #legacy .legacycontent div h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    #legacy .legacycontent div p {
+        font-size: 14px;
+        line-height: 23px;
+    }
+    #legacy .legacycontent div a {
+        font-size: 13px;
+        padding: 10px 35px;
+        border: 2px solid;
+    }
+
+    /* ------------------------ footer responsive in 980px --------------------- */
+
+
+    #footer .footercontent .toppart .singlepart h6 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    #footer .footercontent .toppart .singlepart ul li a {
+        line-height: 2rem;
         font-size: 13px;
     }
-    #favorites .content .mainpart ul li .fullcontent{
-        /* width: 86%; */
-        overflow: hidden;
-        /* height: 400px; */
+
+
+
+    #footer .footercontent .toppart .singlepart .socialmedia {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 20px;
+    }
+
+    #footer .footercontent .toppart .singlepart .socialmedia li a {
+        width: fit-content;
+        padding: 10px;
+    }
+    #footer .footercontent .toppart .singlepart .socialmedia li a i{
+        font-size: 15px;
+    
+    }
+
+    #footer .footercontent hr{
+        margin: 1rem 0;
+    }
+    #footer .footercontent .bottompart {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    
     }
 
 
@@ -883,9 +1001,9 @@ button:hover{
 }
 
 @media (max-width:768px) {
-    #wrapper{
+    /* #wrapper{
         margin: 0 3rem;
-    }
+    } */
 
 
     /* ------------------ favorites responsive 768px ----------------- */
@@ -901,29 +1019,29 @@ button:hover{
 }
 
 @media (max-width:640px) {
-    #wrapper{
+    /* #wrapper{
         margin: 0 1rem;
-    }
+    } */
 
 }
 
 @media (max-width:540px) {
-    #wrapper{
+    /* #wrapper{
         margin: 0 ;
-    }
+    } */
 
 }
 
 @media (max-width:480px) {
-    #wrapper{
+    /* #wrapper{
         margin: 0 ;
-    }
+    } */
 
 }
 
 @media (max-width:360px) {
-    #wrapper{
+    /* #wrapper{
         margin: 0 ;
-    }
+    } */
 
 }
