@@ -385,7 +385,7 @@ button:hover{
 }
   
 #footer .footercontent {
-    padding: 4rem 0;
+    padding-top: 4rem;
 }
   
 #footer .footercontent .toppart {
@@ -505,7 +505,11 @@ button:hover{
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
 
+#footer .footercontent .bottompart .leftside{
+    display: flex;
+    width: 100%;
 }
   
 #footer .footercontent .bottompart .selectiondiv {
@@ -540,7 +544,6 @@ button:hover{
   
 #footer .footercontent .bottompart .bottomheads {
     width: 35%;
-
 }
 
 #footer .footercontent .bottompart .bottomheads ul {
@@ -549,6 +552,7 @@ button:hover{
   
 #footer .footercontent .bottompart .bottomheads ul li {
     width: 100%;
+    margin-right: 10px;
 }
   
 #footer .footercontent .bottompart .bottomheads ul li a {
@@ -991,9 +995,20 @@ button:hover{
         flex-direction: column;
         width: 100%;
         justify-content: space-between;
+        gap: 20px;
+
     
     }
-
+    #footer .footercontent .bottompart .leftside {
+        justify-content: space-between;
+    }
+    #footer .footercontent .bottompart .leftside .bottomheads ul li a {
+        white-space: nowrap;
+    }
+    #footer .footercontent .bottompart .bottomheads {
+        width: fit-content;
+    }
+    
 
 
 
