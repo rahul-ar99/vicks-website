@@ -1,0 +1,929 @@
+@font-face {
+    font-family: introw03;
+    src: url('./asset/font/Intro W03 Black/Intro W03 Black.woff2') format('woff2');
+}
+@font-face {
+    font-family: introw031;
+    src: url('./asset/font/Intro W03 Black/Intro W03 Black.woff') format('woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: introw03,sans-serif;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    cursor: pointer;
+}
+
+#wrapper{
+    margin: 0 21.5rem;
+}
+
+
+/* .btn1 {
+    padding: .8rem 3rem;
+    border: 3px solid;
+    border-radius: 3rem;
+    text-transform: uppercase;
+} */
+h6:hover{
+    cursor: default;
+}
+
+h5:hover{
+    cursor: default;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/* --------------------- main part ------------------------- */
+
+#main{
+    width: 100%;
+}
+
+#main header{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    /* background-color: red; */
+    /* padding: 8px 0; */
+    padding-top: 8px;
+}
+
+#main header nav{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+#main header nav:hover .header{
+    background-color: red;
+}
+
+#main header nav .hamsburg{
+    display: none;
+
+}
+
+#main header nav .hamsburg i{
+    font-size: 25px;    
+}
+
+#main header nav h1{
+    height: 60px;
+}
+
+#main header nav h1 img{
+    height: 100%;
+}
+
+#main header nav .navitems{
+    display: flex;
+    color: inherit;
+    height: 100%;
+}
+
+
+#main header nav .navitems p{
+    /* margin-right: 50px; */
+    padding: 25px;
+    text-transform:uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: inherit;
+    height: max-content;
+    border-bottom:5px solid transparent;
+}
+#main header nav .navitems p:hover{
+    border-color: #09357a;
+}
+
+#main header nav button{
+    background-color: transparent;
+    border: none;
+    color: inherit;
+}
+
+
+#main header nav button i{
+    font-size: 20px;
+    color: inherit;
+}
+
+
+#main #spotlight{
+    width: 100vw;
+    height: fit-content;
+    position: relative; 
+}
+
+
+#main #spotlight .fullcontent{
+    max-height: 68rem;
+    /* width: 100%;
+    height: 100vh; */
+}
+#main #spotlight .fullcontent img{
+    width: 100%;
+    height: 100%;
+}
+
+#main #spotlight .bottompart{
+    width: 100%;
+    display: flex;
+    justify-content: space-between ;
+    bottom: 2rem;
+}
+
+#main #spotlight button{
+    position: absolute;
+    bottom: inherit;
+    left: 50%;
+    font-size: 20px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+}
+#main #spotlight button:hover{
+    cursor: pointer;
+}
+
+#main #spotlight a{
+    position: absolute;
+    color: white;
+    bottom: inherit;
+    right: 20%;
+    border-color:#ffffff;
+    font-size: 15px;
+    padding: .8rem 3rem;
+    border: 3px solid;
+    border-radius: 3rem;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------- favorites ---------------------- */
+
+#favorites {
+    padding: 7rem 0;
+}
+
+#favorites .content {
+    padding: none;
+}
+
+#favorites .content .headpart {
+    display: flex;
+    justify-content: space-between;
+    margin:2rem 0;
+    color: #09357a;
+}
+
+#favorites .content .headpart h3 {
+    font-family: sans-serif;
+    /* font-size: clamp(12px, 4vw, 25px); */
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#favorites .content .headpart h3 span {
+    font-weight: 500;
+}
+
+#favorites .content .headpart a {
+    padding: none;
+    font-family: sans-serif;
+    font-size: 17px;
+    color: #09357a;
+}
+
+#favorites .content .mainpart {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#favorites .content .mainpart ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+    gap: 10px;
+}
+
+#favorites .content .mainpart ul li {
+    width: 31%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: beige; */
+    border: 1px solid black;
+
+}
+
+#favorites .content .mainpart ul li .fullcontent{
+    width: 100%;
+    /* height: 500px; */
+    background-color: black;
+}
+
+#favorites .content .mainpart ul li .fullcontent .favbackground {
+    background-image: url("./asset/images/fav_background.avif");
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: .5rem;
+    /* padding: 1.5rem; */
+    color: #09357a;
+}
+
+#favorites .content .mainpart ul li .fullcontent .favbackground .favcontent {
+    width: 100%;
+    padding: 1rem 0 0 1rem;
+}
+
+#favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  h5 {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    color: #09357a;
+}
+
+#favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  h5 span {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+#favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  p {
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: #09357a;
+    font-family: sans-serif;
+
+}
+
+#favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  .favstar {
+    margin-bottom: 20px;
+}
+
+#favorites .content .mainpart ul li .fullcontent .favbackground .favcontent  .favstar i {
+    margin-bottom: 6px;
+    color: #09357a;
+    font-size: 17px;
+}
+
+#favorites .content .mainpart ul li button {
+    background-color: transparent;
+    margin: 0;
+    color: #09357a;
+    padding: 10px 20px;
+    border: 3px solid;
+    border-radius: 3rem;
+    text-transform: uppercase;
+}
+
+#favorites .content .mainpart ul li .favimage {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#favorites .content .mainpart ul li .favimage img {
+    width: 100%;
+}
+
+
+/*  -------------------------- legacy ---------------------------- */
+#legacy {
+    padding: 0;
+}
+
+#legacy .legacycontent {
+
+    display: flex;
+    width: 85%;
+    margin:0 auto;
+    margin-bottom: 20px;
+}
+  
+#legacy .legacycontent .legacyimage {
+    width: 50%;
+    margin-right: 4.5rem;
+}
+  
+#legacy .legacycontent .legacyimage img {
+    width: 100%;
+}
+  
+#legacy .legacycontent div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+#legacy .legacycontent div h3 {
+    color: #09357a;
+    font-size: clamp(12px, 4vw, 40px);
+    /* font-size: 40px; */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+  
+#legacy .legacycontent div h3 span {
+    font-family: sans-serif;
+    font-weight: 500;
+}
+  
+#legacy .legacycontent div p {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-bottom:25px;
+    font-weight: 500;
+    line-height: 27px;
+}
+  
+#legacy .legacycontent div a {
+    color: #09357a;
+    font-size: 15px;
+    font-weight: 600;
+    /* border-radius: 3rem; */
+    text-transform: uppercase;
+    /* padding: 10px 30px; */
+    border-color:#09357a;
+    width: fit-content;
+    padding: .8rem 3rem;
+    border: 3px solid;
+    border-radius: 3rem;
+    text-transform: uppercase;
+
+}
+
+
+/* ---------------------- footer ------------------------------- */
+
+
+#footer {
+    background-color: #09357a;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+  
+#footer .footercontent {
+    padding: 4rem 0;
+}
+  
+#footer .footercontent .toppart {
+    display: flex;
+    width: 100%;
+}
+  
+#footer .footercontent .toppart .singlepart {
+    width: 20%;
+}
+  
+#footer .footercontent .toppart .singlepart h6 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+  
+#footer .footercontent .toppart .singlepart ul {
+    margin: 0;
+}
+  
+#footer .footercontent .toppart .singlepart ul li {
+    margin: 0;
+}
+  
+#footer .footercontent .toppart .singlepart ul li a {
+    color: inherit;
+    font-family: sans-serif;
+    font-weight:300;
+    line-height: 2.2rem;
+    font-size: 15px;
+}
+  
+#footer .footercontent .toppart .singlepart .socialmedia {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+  
+#footer .footercontent .toppart .singlepart .socialmedia li {
+    margin: 0;
+}
+
+#footer .footercontent .toppart .singlepart .socialmedia li a {
+    border-radius: 50%;
+    padding: 12px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer .footercontent .toppart .singlepart .socialmedia li a i{
+    font-size: 20px;
+    color: #09357a;
+
+}
+
+
+#footer .footercontent .midpart {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+  
+#footer .footercontent .midpart .privacychoice {
+    display: flex;
+    margin-right: 40px;
+}
+  
+#footer .footercontent .midpart .privacychoice p {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-right: 5px;
+}
+  
+#footer .footercontent .midpart .privacychoice .privacyicon {
+    width: 40px;
+}
+  
+#footer .footercontent .midpart .privacychoice .privacyicon img {
+    width: 100%;
+}
+  
+#footer .footercontent .midpart .bbb {
+    width: 80px;
+    border-radius: 5px 5px 9px 9px;
+    overflow: hidden;
+    margin-right: 40px;
+}
+  
+#footer .footercontent .midpart .bbb img {
+    width: 100%;
+}
+  
+#footer .footercontent .midpart .smartlabel{
+    display: flex;
+}
+  
+#footer .footercontent .midpart .smartlabel i {
+    margin-right: 4px;
+}
+  
+#footer .footercontent .midpart .smartlabel p {
+    font-family: sans-serif;
+    font-size: 13px;
+}   
+
+#footer .footercontent hr{
+    margin: 3rem 0;
+}
+  
+#footer .footercontent .bottompart {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+  
+#footer .footercontent .bottompart .selectiondiv {
+    margin-right: 5px;
+}
+
+#footer .footercontent .bottompart .selectiondiv a {
+    display: flex;
+    color: #ffffff;
+    gap: 10px;
+    align-items: center;
+
+}
+
+#footer .footercontent .bottompart .selectiondiv a .countryimg{
+    width: 40px;
+}
+
+#footer .footercontent .bottompart .selectiondiv a .countryimg img{
+    width: 100%;
+}   
+
+#footer .footercontent .bottompart .selectiondiv a p{
+    white-space:nowrap;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+#footer .footercontent .bottompart .selectiondiv a i{
+    margin: 0;
+}
+  
+#footer .footercontent .bottompart .bottomheads {
+    width: 35%;
+
+}
+
+#footer .footercontent .bottompart .bottomheads ul {
+    display: flex;
+}
+  
+#footer .footercontent .bottompart .bottomheads ul li {
+    width: 100%;
+}
+  
+#footer .footercontent .bottompart .bottomheads ul li a {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+
+}
+  
+#footer .footercontent .bottompart .bottominfo {
+    width: 35%;
+    text-align: center;
+    font-size: 14px;
+}
+  
+#footer .footercontent .bottompart .bottominfo p {
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+}
+  
+#footer .footercontent .bottompart .copyright {
+    /* width: 11%; */
+    display: flex;
+    justify-content:right;
+}
+
+#footer .footercontent .bottompart .copyright p {
+    font-family: sans-serif;
+    font-weight: 100;
+
+}  
+
+/* -------------------- responsive for 1440 px -----------------------  */
+
+@media (max-width:1700px) {
+    #wrapper{
+        margin: 0 14rem;
+    }
+
+}
+
+
+@media (max-width:1440px) {
+    #wrapper{
+        margin: 0 12rem;
+    }
+    .btn1{
+        padding: .7rem 2rem;
+    }
+
+
+    /* --------------- spotlight responsive in 1440px ------------------ */
+
+    #main header nav h1{
+        height: 50px;
+    }
+    #main header nav .navitems p{
+        padding: 20px;
+        font-size: 13px;
+    }
+    #main #spotlight a{
+        font-size: 13px;
+    }
+
+
+
+
+
+
+
+    /* ------------favorites responsive in 1440px ----------------- */
+    
+    #favorites .content .mainpart ul li .fullcontent .favbackground h5 {
+        font-size: 20px;
+    }
+
+    #favorites .content .mainpart ul li .fullcontent .favbackground p {
+        font-size: 15px;
+    }
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favstar i {
+
+        font-size: 15px;
+    }
+    #favorites .content .mainpart ul li button {
+        padding: 7px 14px;
+    }
+    #favorites .content .mainpart ul li .fullcontent{
+        /* height: 440px; */
+    }
+
+
+    /* ----------------- legacy responsive in 1440px ------------------ */
+
+    #legacy .legacycontent div {
+        width: 60%;
+    }
+
+    #legacy .legacycontent div h3 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+    #legacy .legacycontent div p {
+        font-size: 15px;
+        margin-bottom:15px;
+        line-height: 26px;
+    }
+    
+
+    /* ------------------ footer responsive in 1440px ------------------ */
+    #footer .footercontent .toppart .singlepart h6 {
+        font-size: 15px;
+        margin-bottom: 15px;
+
+    }
+
+    #footer .footercontent .toppart .singlepart .socialmedia li a {
+        padding: 10px;
+    }
+
+    #footer .footercontent .toppart .singlepart .socialmedia li a i{
+        font-size: 19px;
+    }
+
+    #footer .footercontent .midpart .privacychoice p {
+        font-size: 13px;
+        margin-right: 4px;
+    }
+
+    #footer .footercontent .midpart .privacychoice .privacyicon {
+        width: 35px;
+    }
+
+    #footer .footercontent .midpart .bbb {
+        width: 75px;
+        border-radius: 5px 5px 9px 9px;
+        margin-right: 40px;
+    }
+
+    #footer .footercontent .midpart .smartlabel p {
+        font-size: 12px;
+    }   
+
+    #footer .footercontent .bottompart .selectiondiv a .countryimg{
+        width: 30px;
+    }
+    #footer .footercontent .bottompart .selectiondiv a p{
+        font-size: 15px;
+    }
+    #footer .footercontent .bottompart .selectiondiv a i{
+        font-size: 15px;
+    }
+      
+
+
+
+
+
+}
+@media (max-width:1280px) {
+    #wrapper{
+        margin: 0 8rem;
+    }
+
+
+    /* ------------------ main in responsive 1280px ---------------- */
+
+    #main #spotlight .bottompart{
+        bottom:1.5rem
+    }
+
+    #main #spotlight a{
+        padding: 14px 35px;
+        font-size: 13px;
+
+    }
+
+    #main header nav h1{
+        height: 40px;
+    }
+
+    #main header nav .navitems p{
+        padding: 10px 20px;
+        font-size: 13px;
+        font-weight: 300;
+        border-bottom:3px solid transparent;
+    }
+
+
+
+
+    /* ----------------- favorites resnponsive 1280px ---------------------- */
+
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favstar {
+        margin-bottom: 10px;
+    }
+    #favorites .content .mainpart ul li .fullcontent .favbackground h5 {
+        font-size: 18px;
+    }
+
+    #favorites .content .mainpart ul li .fullcontent .favbackground p {
+        font-size: 14px;
+    }
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favstar i {
+
+        font-size: 14px;
+    }
+    #favorites .content .mainpart ul li button {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    #favorites .content .mainpart ul li .fullcontent{
+        /* height: 400px; */
+    }
+}
+
+@media (max-width:1080px) {
+    #wrapper{
+        margin: 0 4rem;
+    }
+
+
+    /* ------------------ main in responsive 1080px ---------------- */
+
+    #main #spotlight .bottompart{
+        bottom:1.3rem
+    }
+
+    #main #spotlight a{
+        padding: 12px 25px;
+        font-size: 12px;
+
+    }
+
+    #main header nav h1{
+        height: 40px;
+    }
+
+    #main header nav .navitems p{
+        padding: 10px 20px;
+        font-size: 13px;
+        font-weight: 300;
+        border-bottom:3px solid transparent;
+    }
+
+
+
+}
+
+@media (max-width:980px) {
+    #wrapper{
+        margin: 0 1.1rem;
+    }
+
+
+    /* -------------hamsburg ------------------ */
+    #main header nav .hamsburg{
+        display: flex;
+    }
+    #main header nav .navitems{
+        display: none;
+
+    }
+
+
+    /* ------------------ main in responsive 980px ---------------- */
+
+    #main #spotlight .bottompart{
+        bottom:1.2rem
+    }
+
+    #main #spotlight a{
+        padding: 8px 17px;
+        font-size: 12px;
+
+    }
+
+    #main header nav h1{
+        height: 40px;
+    }
+
+    #main #spotlight button{
+        display: none;
+    }
+
+    /* ------------------ favorites responsive 980px ----------------- */
+
+    #favorites {
+        padding: 1rem 0;
+    }
+
+    #favorites .content .headpart h3 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    #favorites .content .mainpart ul li {
+        width: 33%;
+    }
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favstar {
+        margin-bottom: 10px;
+    }
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favstar i{
+        font-size: 2px;
+    }
+    #favorites .content .mainpart ul li .fullcontent .favbackground h5 {
+        font-size: 18px;
+    }
+
+    #favorites .content .mainpart ul li .fullcontent .favbackground p {
+        font-size: 14px;
+    }
+    #favorites .content .mainpart ul li .fullcontent .favbackground .favstar i {
+
+        font-size: 14px;
+    }
+    #favorites .content .mainpart ul li button {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    #favorites .content .mainpart ul li .fullcontent{
+        /* width: 86%; */
+        overflow: hidden;
+        /* height: 400px; */
+    }
+
+
+
+
+
+}
+
+@media (max-width:768px) {
+    #wrapper{
+        margin: 0 3rem;
+    }
+
+
+    /* ------------------ favorites responsive 768px ----------------- */
+
+
+    #favorites .content .mainpart ul {
+        display: block;
+    }
+
+
+
+
+}
+
+@media (max-width:640px) {
+    #wrapper{
+        margin: 0 1rem;
+    }
+
+}
+
+@media (max-width:540px) {
+    #wrapper{
+        margin: 0 ;
+    }
+
+}
+
+@media (max-width:480px) {
+    #wrapper{
+        margin: 0 ;
+    }
+
+}
+
+@media (max-width:360px) {
+    #wrapper{
+        margin: 0 ;
+    }
+
+}

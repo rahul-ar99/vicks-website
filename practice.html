@@ -1,0 +1,35 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Change Outside Div Color on Hover</title>
+	<style>
+	  .outside {
+		background-color: blue; /* Default background color */
+		padding: 20px;
+		transition: background-color 0.3s ease;
+	  }
+	
+	  .inside {
+		padding: 10px;
+		background-color: lightgray;
+		cursor: pointer;
+	  }
+	</style>
+	</head>
+	<body>
+	<div class="outside" id="outsideDiv" onmouseout="resetColor()">
+	  <div class="inside" onmouseover="changeColor()">Hover over me</div>
+	</div>
+	
+	<script>
+	function changeColor() {
+	  document.getElementById("outsideDiv").style.backgroundColor = "red";
+	}
+	
+	function resetColor() {
+	  document.getElementById("outsideDiv").style.backgroundColor = "blue";
+	}
+	</script>
+	
+	</body>
+	</html>
