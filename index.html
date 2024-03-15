@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Vicks</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/73291a843a.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./style.css">
@@ -15,11 +15,11 @@
                 <section id="wrapper">
                     <nav onmouseout="resetColor()">
                         <div class="hamsburg">
-                            <i class="fa fa-bars"></i>
+                            <i  class="fa fa-bars"></i>
+                            <i class="fa fa-close"></i>
                         </div>
-
                         <h1>
-                            <img src="./asset/images/Vicks-Logo.webp" alt="">
+                            <a href=""><img src="./asset/images/Vicks-Logo.webp" alt="vickslogo" /></a>
                         </h1>
                         <div class="navitems" onmouseover="changeColor()">
                             <p>products</p>
@@ -29,15 +29,42 @@
                         </div>
                         <button><i class="fa fa-search"></i></button>
                     </nav>
+                    
                 </section>
             </header>
+
             <section id="spotlight">
                 <div class="fullcontent">
-                    <img src="./asset/images/spotlight.webp" alt="">
+                    <img class="responsivespotlight" src="./asset/images/New_Project__21_.webp" alt="vicks-spotlight"/>
+                    <img class="spotlightimage"  src="./asset/images/spotlight.webp" alt="vicks-spotlight"/>
                 </div>
                 <div class="bottompart">
                     <button><i class="fas fa-angle-down"></i></button>
                     <a href="#" class="btn1">learn more</a>
+                </div>
+            </section>
+            <section id="hamsburgsec">
+                <div id="wrapper">
+
+                    <ul class="content">
+                        <li class="elements">
+                            <p>products</p>
+                            <i class="fa fa-plus"></i>
+                        </li>
+                        <li class="elements">
+                            <p>treatment & tips</p>
+                            <i class="fa fa-plus"></i>
+                        </li>
+                        
+                        <li class="elements">
+                            <p>faqs</p>
+                            <i class="fa fa-plus"></i>
+                        </li>
+                        <li class="elements">
+                            <p>out story</p>
+                            <i class="fa fa-plus"></i>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </section>
@@ -70,7 +97,7 @@
                                                 <button href="#" class="btn1">shop</button>
                                             </div>
                                             <div class="favimage">
-                                                <img src="./asset/images/fav_2.avif" alt="">
+                                                <img src="./asset/images/fav_2.avif" alt="favoritesimage"/>
                                             </div>
                                         </div>
                                     </a>
@@ -94,7 +121,7 @@
                                                 <button href="#" class="btn1">shop</button>
                                             </div>
                                             <div class="favimage">
-                                                <img src="./asset/images/fav_1.avif" alt="">
+                                                <img src="./asset/images/fav_1.avif" alt="favoritesimage"/>
                                             </div>
                                         </a>
                                     </div>
@@ -105,7 +132,7 @@
                                     <a href="#">
                                         <div class="favbackground">
                                             <div class="favcontent">
-                                                <h5>vicks<br><span>babyrub</span></h5>
+                                                <h5>vicks<br><span> babyrub</span></h5>
                                                 <p>cold & flu</p>
                                                 
                                                 <div class="favstar">
@@ -118,7 +145,7 @@
                                                 <button href="#" class="btn1">shop</button>
                                             </div>
                                             <div class="favimage">
-                                                <img src="./asset/images/fav_3.avif" alt="">
+                                                <img src="./asset/images/fav_3.avif" alt="favoritesimage"/>
                                             </div>
                                         </a>
                                     </div>
@@ -136,10 +163,10 @@
             <section id="wrapper">
                 <div class="legacycontent">
                     <div class="legacyimage">
-                        <img src="./asset/images/26_VicksLegacy.webp" alt="">
+                        <img src="./asset/images/26_VicksLegacy.webp" alt="vaporubimage">
                     </div>
                     <div>
-                        <h3>vicks legacy <br><span>of care</span></h3>
+                        <h3>vicks legacy <br class="legacybr"><span>of care</span></h3>
                         <p>the vicks legacy is about more than just cold and flu medicine. its about fiving families the oppertunity to continue life even on sick days for more than 100 years.</p>
                         <a href="#" class="btn1">learn more</a>
                     </div>
@@ -212,11 +239,11 @@
                         <div class="privacychoice">
                             <p>your privacy choices</p>
                             <div class="privacyicon">
-                                <img src="./asset/images/privacyoptions730x350.png" alt="">
+                                <img src="./asset/images/privacyoptions730x350.png" alt="buttonimg"/>
                             </div>
                         </div>
                         <div class="bbb">
-                            <img src="./asset/images/bbb.png" alt="">
+                            <img src="./asset/images/bbb.png" alt="bbb"/>
                         </div>
                         <div class="smartlabel">
                             <i class="fa-regular fa-file"></i>
@@ -229,7 +256,7 @@
                             <div class="selectiondiv">
                                 <a href="">
                                     <div class="countryimg">
-                                        <img src="./asset/images/usa.png" alt="">
+                                        <img src="./asset/images/usa.png" alt="countryflag"/>
                                     </div>
                                     <p>United State</p>
                                     <i class="fas fa-angle-down"></i>
@@ -262,18 +289,11 @@
     <script>
         header1 = document.querySelector("header")
         navbar = document.querySelector("#main header nav")
-
-        window.addEventListener("scroll" ,()=>{
-            if(window.scrollY > 50){
-                header1.style.backgroundColor = "#ffffff"
-                navbar.style.color = "#09357a"
-            }
-            else{
-                header1.style.backgroundColor = "transparent"
-                navbar.style.color = "#ffffff"
-            }
-        })
-
+        hamsburg = document.querySelector("#hamsburgsec")
+        hamsburgicon = document.querySelector(".fa-bars")
+        hamsburgclose = document.querySelector(".fa-close")
+        body = document.querySelector("body")
+        searchicon = document.querySelector("#main header nav button i")
 
         function changeColor(){
             header1.style.backgroundColor = "#ffffff"
@@ -285,6 +305,45 @@
                 navbar.style.color = "#ffffff"
             }
         }
+
+        window.addEventListener("scroll" ,()=>{
+            console.log(window.scrollY)
+            if(window.scrollY > 50){
+                header1.style.backgroundColor = "#ffffff"
+                navbar.style.color = "#09357a"
+            }
+            else{
+                header1.style.backgroundColor = "transparent"
+                navbar.style.color = "#ffffff"
+            }
+        })
+
+
+        // ----------  hamsburg -------------
+        window.addEventListener("click",(e)=>{
+
+            if(e.target==hamsburgicon){
+                hamsburg.style.top = `${window.scrollY}px`
+        
+                hamsburg.style.display = "flex"
+                hamsburgicon.style.display = "none"
+                hamsburgclose.style.display = "flex"
+                body.style.overflow = "hidden"
+                searchicon.style.color = "#09357a"
+                header1.style.backgroundColor = "#ffffff"
+                hamsburg.style.width = "100vw"
+
+            }
+            else if(e.target==hamsburgclose){
+                hamsburgicon.style.display = "flex"
+                hamsburgclose.style.display = "none"
+                hamsburg.style.display = "none"
+                body.style.overflow = "auto"
+                searchicon.style.color = "inherit"
+            }
+        })
+
+
     </script>
 
 </html>
