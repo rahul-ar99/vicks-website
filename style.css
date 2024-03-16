@@ -30,12 +30,6 @@ a:hover{
     max-width: 1280px;
 }
 
-/* .btn1 {
-    padding: .8rem 3rem;
-    border: 3px solid;
-    border-radius: 3rem;
-    text-transform: uppercase;
-} */
 
 h6:hover{
     cursor: default;
@@ -62,8 +56,6 @@ button:hover{
 #main header{
     position: fixed;
     width: 100%;
-    /* background-color: red; */
-    /* padding: 8px 0; */
     padding-top: 8px;
     z-index: 10;
 }
@@ -1098,6 +1090,11 @@ button:hover{
         bottom:-3.5rem;
         border-color: #09357a;
         color: #09357a;
+
+    }
+    #main #spotlight a:hover{
+        background-color: #09357a;
+        color: #ffffff;
     }
     /* ------------------ favorites responsive 768px ----------------- */
 
@@ -1222,6 +1219,9 @@ button:hover{
         margin-bottom: 20px;
     }
 
+    #footer .footercontent .toppart .singlepart .socialmedia:last-child{
+        width: max-content;
+    }
 
     #footer .footercontent .toppart .singlepart .socialmedia li a i{
         font-size: 17px;
