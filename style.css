@@ -525,7 +525,6 @@ button:hover{
 
 #footer .footercontent .toppart .singlepart .socialmedia li a {
     border-radius: 50%;
-    /* padding: 12px; */
     background-color: #ffffff;
     display: flex;
     align-items: center;
@@ -699,9 +698,7 @@ button:hover{
 
 
 @media (max-width:1440px) {
-    #wrapper{
-        /* width: 80%; */
-    }
+
     .btn1{
         padding: .7rem 2rem;
     }
@@ -719,9 +716,6 @@ button:hover{
     #main #spotlight a{
         font-size: 13px;
     }
-
-
-
 
 
 
@@ -814,9 +808,6 @@ button:hover{
 
     /* ------------------ main in responsive 1280px ---------------- */
 
-    #main #spotlight .bottompart{
-        /* bottom:1.5rem */
-    }
 
     #main #spotlight a{
         padding: 14px 35px;
@@ -1219,6 +1210,8 @@ button:hover{
     #footer .footercontent .toppart {
         flex-wrap: wrap;
         row-gap: 40px;
+        justify-content: center;
+        
     }
 
     #footer .footercontent .toppart .singlepart .socialmedia{
@@ -1226,7 +1219,12 @@ button:hover{
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
-        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    #footer .footercontent .toppart .singlepart .socialmedia li a i{
+        font-size: 17px;
     }
     #footer .footercontent .bottompart .bottomheads ul {
         display: block;
