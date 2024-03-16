@@ -25,7 +25,7 @@ a:hover{
 }
 
 #wrapper{
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -196,8 +196,13 @@ button:hover{
     border: 3px solid;
     border-radius: 3rem;
     text-transform: uppercase;
-
 }
+
+#main #spotlight a:hover{
+    background-color: #ffffff;
+    color: #09357a;
+}
+
 .trans{
     width: 100vw;
 }
@@ -312,11 +317,15 @@ button:hover{
     background-position: bottom;
     width: 100%;
     height: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: .5rem;
     /* padding: 1.5rem; */
     color: #09357a;
+    transition: transform .2s ease-out;
 }
+#favorites .content .mainpart ul li .fullcontent .favbackground:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
 
 #favorites .content .mainpart ul li .fullcontent .favbackground .favcontent {
     width: 100%;
@@ -362,6 +371,10 @@ button:hover{
     border: 3px solid;
     border-radius: 3rem;
     text-transform: uppercase;
+}
+#favorites .content .mainpart ul li button:hover{
+    background-color: #09357a;
+    color: #ffffff;
 }
 
 #favorites .content .mainpart ul li .favimage {
@@ -442,8 +455,13 @@ button:hover{
     border: 3px solid;
     border-radius: 3rem;
     text-transform: uppercase;
-
+    
 }
+#legacy .legacycontent div a:hover{
+    background-color: #09357a;
+    color: #ffffff;
+}
+
 
 
 /* ---------------------- footer ------------------------------- */
@@ -513,7 +531,17 @@ button:hover{
     justify-content: center;
     width: 35px;
     aspect-ratio: 1;
+    border: 1px solid transparent;
 }
+#footer .footercontent .toppart .singlepart .socialmedia li a:hover{
+    background-color: #09357a;
+    border: 1px solid white;
+}
+#footer .footercontent .toppart .singlepart .socialmedia li a:hover i{
+    /* filter: invert(1); */
+    color: #ffffff;
+}
+
 
 #footer .footercontent .toppart .singlepart .socialmedia li a i{
     font-size: 20px;
@@ -671,7 +699,7 @@ button:hover{
 
 @media (max-width:1440px) {
     #wrapper{
-        width: 80%;
+        /* width: 80%; */
     }
     .btn1{
         padding: .7rem 2rem;
