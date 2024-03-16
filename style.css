@@ -27,6 +27,7 @@ a:hover{
 #wrapper{
     width: 90%;
     margin: 0 auto;
+    max-width: 1280px;
 }
 
 /* .btn1 {
@@ -1051,14 +1052,6 @@ button:hover{
         gap: 20px;
     }
 
-    #footer .footercontent .toppart .singlepart .socialmedia li a {
-        width: fit-content;
-        padding: 10px;
-    }
-    #footer .footercontent .toppart .singlepart .socialmedia li a i{
-        font-size: 15px;
-    
-    }
 
     #footer .footercontent hr{
         margin: 1rem 0;
@@ -1089,9 +1082,7 @@ button:hover{
 }
 
 @media (max-width:768px) {
-    /* #wrapper{
-        margin: 0 3rem;
-    } */
+
 
     /* -------------- spotlight ---------- */
 
@@ -1186,9 +1177,7 @@ button:hover{
 }
 
 @media (max-width:640px) {
-    /* #wrapper{
-        margin: 0 1rem;
-    } */
+
 
     #favorites .content .mainpart ul li {
         width: 46%;
@@ -1224,9 +1213,7 @@ button:hover{
 }
 
 @media (max-width:540px) {
-    /* #wrapper{
-        margin: 0 ;
-    } */
+
 
 
     #footer .footercontent .toppart {
