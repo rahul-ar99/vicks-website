@@ -24,7 +24,7 @@ a:hover{
     cursor: pointer;
 }
 
-#wrapper{
+.wrapper{
     width: 90%;
     margin: 0 auto;
     max-width: 1280px;
@@ -59,7 +59,7 @@ button:hover{
     padding-top: 8px;
     z-index: 10;
 }
-#main header #wrapper{
+#main header .wrapper{
     position: relative;
 }
 
@@ -793,9 +793,6 @@ button:hover{
 
 }
 @media (max-width:1280px) {
-    #wrapper{
-        width: 90%;
-    }
 
 
     /* ------------------ main in responsive 1280px ---------------- */
@@ -857,9 +854,7 @@ button:hover{
 }
 
 @media (max-width:1080px) {
-    /* #wrapper{
-        margin: 0 4rem;
-    } */
+
 
 
     /* ------------------ main in responsive 1080px ---------------- */
@@ -1233,9 +1228,7 @@ button:hover{
 }
 
 @media (max-width:480px) {
-    /* #wrapper{
-        margin: 0 ;
-    } */
+
 
     #favorites .content .mainpart ul li {
         width: 100%;
@@ -1263,8 +1256,5 @@ button:hover{
 }
 
 @media (max-width:360px) {
-    /* #wrapper{
-        margin: 0 ;
-    } */
 
 }
