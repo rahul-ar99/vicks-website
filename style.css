@@ -379,6 +379,154 @@ button:hover{
 #favorites .content .mainpart ul li .favimage img {
     width: 100%;
 }
+/* ------------------------- end favorites --------------------- */
+
+/* ------------------------- find your vicks ------------------- */
+
+#findvicks {
+    width: 100%;
+    padding-top: 7rem;
+
+}
+  
+#findvicks .wrapper .content {  
+    width: 100%;
+}
+  
+#findvicks .wrapper .content .headpart {  
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:2rem;
+    color: #09357a;
+}
+  
+#findvicks .wrapper .content .headpart h3 {  
+    font-family: sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+  
+#findvicks .wrapper .content .headpart h3 span {  
+    font-weight: 500;
+}
+
+#findvicks .wrapper .content .headpart input[type="text"] {  
+    display: flex;
+}
+  
+#findvicks .wrapper .content .mainpart {  
+    width: 100%;
+    position: relative;
+}
+
+#findvicks .wrapper .content .mainpart .fullbox {  
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    gap: 20px;
+    scroll-behavior: smooth;
+}
+  
+#findvicks .wrapper .content .mainpart .fullbox .singlebox {  
+    width: 100%;
+}
+
+#findvicks .wrapper .content .mainpart .fullbox .singlebox .imagecontainer {
+    width: 300px;
+}
+  
+#findvicks .wrapper .content .mainpart .fullbox .singlebox .imagecontainer img {  
+    width: 100%;
+}
+  
+#findvicks .wrapper .content .mainpart .fullbox .singlebox .imagehead {  
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #ffffff;
+}
+
+#findvicks .wrapper .content .mainpart .fullbox .singlebox .imagehead h5 {  
+    font-size: 30px;
+}
+#findvicks .wrapper .content .mainpart .scrollbtn{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+#findvicks .wrapper .content .mainpart .leftbtn{
+    left: 0;
+}
+#findvicks .wrapper .content .mainpart .rightbtn{
+    right: 0;
+}
+#findvicks .wrapper .content .mainpart .scrollbtn button{
+    width: 70px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffffc9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 15px 15px ;
+
+}
+#findvicks .wrapper .content .mainpart .scrollbtn button i{
+    font-size: 30px;
+}
+
+/* --------------------- modal of find your vicks -------------- */
+#findvicksmodal {
+    background-color: #ffffff;
+    position: fixed;
+    top: 20%;
+    display: none;
+    padding: 40px;
+    width: 1000px;
+    left: 20%;
+    gap: 20px;
+    z-index: 2;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+  
+#findvicksmodal .left {
+    width: 800px;
+    /* height: 100px; */
+}
+  
+#findvicksmodal .left img {
+    width: 100%;
+    height: auto    ;
+}
+  
+#findvicksmodal .right {
+    display: block;
+}
+  
+#findvicksmodal .right .head {
+    width: 100%;
+}
+  
+#findvicksmodal .right .head h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+  
+#findvicksmodal .right .content {
+    width: 100%;
+}
+  
+#findvicksmodal .right .content p {
+    font-size: 18px;
+}
+  
+ 
+/* ------------------------- end find your vicks ------------------- */
 
 
 /*  -------------------------- legacy ---------------------------- */

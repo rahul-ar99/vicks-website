@@ -165,17 +165,51 @@
         <section class="wrapper">
             <section class="content">
                 <div class="headpart">
-                    <h3>all time <span>favorites</span></h3>
-                    <a href="#">view all</a>
+                    <h3>find <span>your vicks</span></h3>
+                    <input type="text" id="findvicksinput" >
                 </div>
                 <div class="mainpart">
-                    
+                    <div class="leftbtn scrollbtn">
+                        <button onclick="onClickScroll('left')"><i class="fa fa-angle-left"></i></button>
+                    </div>
+                    <div class="fullbox">
+                        <!-- ------------------------------------------------- -->
+                        <!-- -------items coming from javascript ------------- -->
+                        <!-- ------------------------------------------------- -->
+                    </div>
+                    <div class="rightbtn scrollbtn">
+                        <button onclick="onClickScroll('right')"><i class="fa fa-angle-right"></i></button>
+                    </div>
                 </div>
             </section>
         </section>
     </section>
+    <!-- ----------------------- modal of find your vicks ------------------- -->
+
+    <section id="findvicksmodal">
+        <div class="left">
+            <img src="./asset/images/YourVicks-1.webp" alt="vicks image">
+        </div>
+        <div class="right">
+            <div class="head">
+                <h3>vicks vapo</h3>
+            </div>
+            <div class="content">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, excepturi harum? Dolor, autem. Non tempore dolores et quo voluptas accusantium illum quas velit a voluptatum! Sit minima perspiciatis sint? Aperiam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, excepturi harum? Dolor, autem. Non tempore dolores et quo voluptas accusantium illum quas velit a voluptatum! Sit minima perspiciatis sint? Aperiam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, excepturi harum? Dolor, autem. Non tempore dolores et quo voluptas accusantium illum quas velit a voluptatum! Sit minima perspiciatis sint? Aperiam.</p>
+                </div>
+                <button onclick="handleCloseModal()">close</button>
+
+            </div>
+        </div>
+    </section>
 
 
+    <!-- ----------------------- end modal of find your vicks ------------------- -->
+    
+    
     <!--  ------------------------- end of find your vicks ------------------ -->
 
 
@@ -307,64 +341,5 @@
         </section>
         <!--  ------------------------ end of footer -------------------------- -->   
     </body>
-    <script>
-        header1 = document.querySelector("header")
-        navbar = document.querySelector("#main header nav")
-        hamsburg = document.querySelector("#hamsburgsec")
-        hamsburgicon = document.querySelector(".fa-bars")
-        hamsburgclose = document.querySelector(".fa-close")
-        body = document.querySelector("body")
-        searchicon = document.querySelector("#main header nav button i")
-
-        function changeColor(){
-            header1.style.backgroundColor = "#ffffff"
-            navbar.style.color = "#09357a"
-        }
-        function resetColor(){
-            if(window.scrollY < 50){
-                header1.style.backgroundColor = "transparent"
-                navbar.style.color = "#ffffff"
-            }
-        }
-
-        window.addEventListener("scroll" ,()=>{
-            console.log(window.scrollY)
-            if(window.scrollY > 50){
-                header1.style.backgroundColor = "#ffffff"
-                navbar.style.color = "#09357a"
-            }
-            else{
-                header1.style.backgroundColor = "transparent"
-                navbar.style.color = "#ffffff"
-            }
-        })
-
-
-        // ----------  hamsburg -------------
-        window.addEventListener("click",(e)=>{
-
-            if(e.target==hamsburgicon){
-                hamsburg.style.top = `${window.scrollY}px`
-        
-                hamsburg.style.display = "flex"
-                hamsburgicon.style.display = "none"
-                hamsburgclose.style.display = "flex"
-                body.style.overflow = "hidden"
-                searchicon.style.color = "#09357a"
-                header1.style.backgroundColor = "#ffffff"
-                hamsburg.style.width = "100vw"
-
-            }
-            else if(e.target==hamsburgclose){
-                hamsburgicon.style.display = "flex"
-                hamsburgclose.style.display = "none"
-                hamsburg.style.display = "none"
-                body.style.overflow = "auto"
-                searchicon.style.color = "inherit"
-            }
-        })
-
-
-    </script>
-
+    <script src="./script.js"></script>
 </html>
