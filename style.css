@@ -278,20 +278,56 @@ button:hover{
 }
 
 #favorites .content .mainpart {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+#favorites .content .mainpart .scrollbtn{
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    transition: .3s ;
+}
+#favorites .content .mainpart .scrollbtn:hover{
+    transform: scale(1.1);
+}
+#favorites .content .mainpart .scrollbtn:hover button{
+    background-color: #09357a;
+}
+#favorites .content .mainpart .scrollbtn button{
+    width: 70px;
+    aspect-ratio: 1;
+    background-color:#09347ac7 ;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 20px;
+}
+#favorites .content .mainpart .leftbtn{
+    left: 0;
+}
+#favorites .content .mainpart .rightbtn{
+    right: 0;
 }
 
+
 #favorites .content .mainpart ul {
-    width: 100%;
+    /* width: 100%; */
+    padding: 50px;
+    width: max-content;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 30px; 
+    overflow: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+
 }
 
 #favorites .content .mainpart ul li {
-    width: 31%;
+    min-width: 380px;
     display: flex;
     justify-content: space-between;
     /* background-color: beige; */
@@ -411,9 +447,16 @@ button:hover{
 #findvicks .wrapper .content .headpart h3 span {  
     font-weight: 500;
 }
-
+#findvicks .wrapper .content .headpart .findvickssearch{  
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 #findvicks .wrapper .content .headpart input[type="text"] {  
     display: flex;
+    padding: 5px;
+    font-size: 20px;
+    color: #09357a;
 }
   
 #findvicks .wrapper .content .mainpart {  
@@ -424,17 +467,45 @@ button:hover{
 #findvicks .wrapper .content .mainpart .fullbox {  
     width: 100%;
     display: flex;
+    justify-content: left;
     overflow: scroll;
     gap: 20px;
     scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
 }
   
 #findvicks .wrapper .content .mainpart .fullbox .singlebox {  
+    /* width: 100%; */
+    transition: .2s ease;
+}
+#findvicks .wrapper .content .mainpart .fullbox .singlebox1 {  
     width: 100%;
+    height: 489.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#findvicks .wrapper .content .mainpart .fullbox .singlebox1 h5{
+    font-size: 30px;
+    color: #09357a;
+    text-transform: capitalize;
+}
+
+
+#findvicks .wrapper .content .mainpart .fullbox .singlebox:hover {  
+    transform: scale(.95);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 #findvicks .wrapper .content .mainpart .fullbox .singlebox .imagecontainer {
     width: 300px;
+}
+  
+#findvicks .wrapper .content .mainpart .fullbox .singlebox .imagecontainer1 {
+    width: 300px;
+    min-height: 489.533px;
 }
   
 #findvicks .wrapper .content .mainpart .fullbox .singlebox .imagecontainer img {  
@@ -446,6 +517,10 @@ button:hover{
     top: 30px;
     left: 30px;
     color: #ffffff;
+}
+
+#findvicks .wrapper .content .mainpart .fullbox .singlebox .imagehead1{
+    color: black;
 }
 
 #findvicks .wrapper .content .mainpart .fullbox .singlebox .imagehead h5 {  
@@ -488,9 +563,11 @@ button:hover{
     width: 1000px;
     left: 20%;
     gap: 20px;
-    z-index: 2;
+    transform: scale(.0);
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: .5s transform;
+    z-index: 12;
 }
   
 #findvicksmodal .left {
@@ -509,6 +586,18 @@ button:hover{
   
 #findvicksmodal .right .head {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#findvicksmodal .right .head button{
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    aspect-ratio: 1;
+    height: min-content;
+}
+#findvicksmodal .right .head button i{
+    font-size: 20px;
 }
   
 #findvicksmodal .right .head h3 {
@@ -519,10 +608,16 @@ button:hover{
   
 #findvicksmodal .right .content {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    gap: 10px;
 }
   
 #findvicksmodal .right .content p {
     font-size: 18px;
+    font-weight: 100;
+    font-family: sans-serif;
 }
   
  
@@ -862,6 +957,12 @@ button:hover{
 
     /* ------------favorites responsive in 1440px ----------------- */
     
+    #favorites .content .mainpart ul{
+
+        width: 100%;
+    }
+
+
     #favorites .content .mainpart ul li .fullcontent .favbackground h5 {
         font-size: 20px;
     }

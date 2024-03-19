@@ -47,18 +47,23 @@ const findVicks = [
 
 
 // ------------- navbar color changing -----------
+
+// onhover color changing
 function changeColor(){
     header1.style.backgroundColor = "#ffffff"
     navbar.style.color = "#09357a"
 }
+
+// mouseout reset default color
 function resetColor(){
     if(window.scrollY < 50){
         header1.style.backgroundColor = "transparent"
         navbar.style.color = "#ffffff"
     }
 }
+
+// onscroll navbar color change
 window.addEventListener("scroll" ,()=>{
-    // console.log(window.scrollY)
     if(window.scrollY > 50){
         header1.style.backgroundColor = "#ffffff"
         navbar.style.color = "#09357a"
@@ -68,6 +73,11 @@ window.addEventListener("scroll" ,()=>{
         navbar.style.color = "#ffffff"
     }
 })
+
+
+
+
+
 
 // ---------------  hamsburg ------------------
 window.addEventListener("click",(e)=>{
@@ -91,12 +101,74 @@ window.addEventListener("click",(e)=>{
         searchicon.style.color = "inherit"
     }
 })
-const findVicksInput = document.getElementById("findvicksinput")
 
-findVicksInput.addEventListener("change",()=>})
+
+
+
+
+// ------------------------ find your vicks input ---------------------
+
+const findVicksInput = document.getElementById("findvicksinput")
+const findVicksArrowBtn = document.querySelectorAll("#findvicks .wrapper .content .mainpart .scrollbtn")
+
+var findVicksAfterMap = []
+
+function inputChange(e){
+    findVicksAfterMap = []
+    // findVicksAfterMap = findVicks.map((element)=>{
+    findVicks.map((element)=>{
+        if(((element.head).toLowerCase()).indexOf(e.toLowerCase())>= 0){
+            // return element
+            findVicksAfterMap.push(element)
+        }
+        // return 0
+    })
+    // find vicks scrolling div
+    var fullBox = document.querySelector('#findvicks .wrapper .content .mainpart .fullbox')
+    var fullboxContent = ''
+    fullBox.innerHTML = ''
+    if(findVicksAfterMap.length >0){
+        findVicksAfterMap.forEach(element =>{
+            if(element != 0){
+                fullBox.innerHTML +=`
+                    <div class="singlebox" onclick="handleModal(${element.id})">
+                    <div class="imagecontainer">
+                    <img src="./asset/images/${element.image}.webp" alt="vicks image">
+                    </div>
+                    <div class="imagehead">
+                    <h5>${element.head}</h5>
+                    </div>
+                    </div>
+                `
+            }
+        })
+    }
+    else{
+            fullBox.innerHTML +=`
+                <div class="singlebox1">
+                    <h5>no items</h5>
+                </div>
+           `
+    }
+
+    if(findVicksAfterMap.length <= 4){
+        for(let i=0;i<2;i++){
+            findVicksArrowBtn[i].style.display = 'none'
+        }
+    }
+    else{
+        for(let i=0;i<2;i++){
+            findVicksArrowBtn[i].style.display = 'flex  '
+        }
+    }
+
+        
+    fullBox.innerHTML += fullboxContent
+}
+inputChange("")
+
 var findVicksdata = []
 findVicks.map((e)=>{
-    console.log(findVicksdata)
     if(e.head.indexOf("a") != -1){
         findVicksdata.push(e)
     }
@@ -105,55 +177,60 @@ findVicks.map((e)=>{
 
 
 
-// find vicks scrolling div
-var fullBox = document.querySelector('#findvicks .wrapper .content .mainpart .fullbox')
 
-findVicks.forEach(element =>{
-    fullBox.innerHTML +=`
-    <div class="singlebox" onclick="handleModal(${element.id})">
-    <div class="imagecontainer">
-    <img src="./asset/images/${element.image}.webp" alt="vicks image">
-    </div>
-    <div class="imagehead">
-    <h5>${element.head}</h5>
-    </div>
-    </div>
-    `
-})
 
 
 // scroll function
 var scrollingBoolian = true
 
-function onClickScroll(scrolling) {
-    console.log("hesfaslk")
-    const asdf = document.querySelector("#findvicks .wrapper .content .mainpart .fullbox")
+function onClickScroll(scrolling , element) {
+    var fullboxscroll = document.querySelector("#findvicks .wrapper .content .mainpart .fullbox")
+    var divWidth = document.querySelector("#findvicks .wrapper .content .mainpart .fullbox .singlebox").offsetWidth
+    var scrollGap = 20
+
+
+    const YourVicksBoxscroll = document.querySelector("#findvicks .wrapper .content .mainpart .fullbox")
     const yourVicksDivWidth = document.querySelector("#findvicks .wrapper .content .mainpart .fullbox .singlebox").offsetWidth
-    const yourVicksDivGap = document.querySelector("#findvicks .wrapper .content .mainpart .fullbox")
-    // console.log(yourVicksDivGap)
+    const favBoxscroll = document.querySelector("#favorites .content .mainpart ul")
+    const mainDivWidth = document.querySelector("#favorites .content .mainpart ul li").offsetWidth
+
+    if(element==1){
+        fullboxscroll = YourVicksBoxscroll
+        divWidth = yourVicksDivWidth
+        scrollGap = 20
+    }
+    else if(element == 0){
+        fullboxscroll = favBoxscroll
+        divWidth = mainDivWidth 
+        scrollGap = 50
+        
+    }
+
+
     if(scrollingBoolian){
         scrollingBoolian = false
         if(scrolling == "right"){
-            asdf.scrollLeft += (yourVicksDivWidth + 20)
+            fullboxscroll.scrollLeft += (divWidth + scrollGap)
         }
         else{
-            asdf.scrollLeft -= yourVicksDivWidth + 20
+            fullboxscroll.scrollLeft -= divWidth + scrollGap
         }
         setTimeout(()=>scrollingBoolian = true, 500)
     }
-    console.log(asdf.scrollLeft)
 }
 
 
-// modal function
+//--------------------------- modal ------------------------------------
+
 var userModal = document.querySelectorAll("#findvicks .wrapper .content .mainpart .fullbox .singlebox")
 var userModalid = document.getElementById("findvicksmodal")
 var modalImg = document.querySelector('#findvicksmodal .left')
-var modalHead = document.querySelector('#findvicksmodal .right .head')
+var modalHead = document.querySelector('#findvicksmodal .right .head h3')
+var modalFull = document.getElementById('findvicksmodal')
 var modal = userModalid.parentElement;
 
 
-// open a modal
+// open modal function
 
 function handleModal(id){
     findVicks.forEach(element => {
@@ -162,14 +239,27 @@ function handleModal(id){
                 <img src="./asset/images/YourVicks-${id}.webp" alt="vicks image">
             `
             modalHead.innerHTML = `<h3>${element.head}</h3>`
-            // console.log(id)
         }
+        
     })
     userModalid.style.display = 'flex'
+    setTimeout(() => {
+        modalFull.style.transform = 'scale(1)'
+    }, 100);
+    document.body.style.overflow = "hidden"
 }
+
+//closing modal
+
 function handleCloseModal(){
     userModalid.style.display = 'none'
+    modalFull.style.transform = 'scale(0)'
+    document.body.style.overflow = "scroll"
 }
+
+
+
+
 
 
 

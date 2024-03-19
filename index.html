@@ -81,6 +81,9 @@
                         <a href="#">view all</a>
                     </div>
                     <div class="mainpart">
+                        <div class="leftbtn scrollbtn">
+                            <button onclick="onClickScroll('left',0)"><i class="fa fa-angle-left"></i></button>
+                        </div>
                         <ul>
                             <li>
                                 <a href="#">
@@ -152,7 +155,82 @@
                                     </a>
                                 </div>
                             </li>
+                            <li>
+                                <a href="#">
+                                    <div class="fullcontent">
+                                        <div class="favbackground">
+                                            <div class="favcontent">
+                                                <h5>vicks<br><span> babyrub</span></h5>
+                                                <p>cold & flu</p>
+                                                
+                                                <div class="favstar">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                                <button href="#" class="btn1">shop</button>
+                                            </div>
+                                            <div class="favimage">
+                                                <img src="./asset/images/fav_3.avif" alt="favoritesimage"/>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="fullcontent">
+                                        <div class="favbackground">
+                                            <div class="favcontent">
+                                                <h5>vicks<br><span> babyrub</span></h5>
+                                                <p>cold & flu</p>
+                                                
+                                                <div class="favstar">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                                <button href="#" class="btn1">shop</button>
+                                            </div>
+                                            <div class="favimage">
+                                                <img src="./asset/images/fav_3.avif" alt="favoritesimage"/>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="fullcontent">
+                                        <div class="favbackground">
+                                            <div class="favcontent">
+                                                <h5>vicks<br><span> babyrub</span></h5>
+                                                <p>cold & flu</p>
+                                                
+                                                <div class="favstar">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                                <button href="#" class="btn1">shop</button>
+                                            </div>
+                                            <div class="favimage">
+                                                <img src="./asset/images/fav_3.avif" alt="favoritesimage"/>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
                         </ul>
+                        <div class="rightbtn scrollbtn">
+                            <button onclick="onClickScroll('right',0)"><i class="fa fa-angle-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -166,11 +244,15 @@
             <section class="content">
                 <div class="headpart">
                     <h3>find <span>your vicks</span></h3>
-                    <input type="text" id="findvicksinput" >
+                    <div class="findvickssearch">
+                        <label for="findvicksinput">Search</label>
+                        <input oninput="inputChange(this.value)" type="text" id="findvicksinput" >
+
+                    </div>
                 </div>
                 <div class="mainpart">
                     <div class="leftbtn scrollbtn">
-                        <button onclick="onClickScroll('left')"><i class="fa fa-angle-left"></i></button>
+                        <button onclick="onClickScroll('left',1)"><i class="fa fa-angle-left"></i></button>
                     </div>
                     <div class="fullbox">
                         <!-- ------------------------------------------------- -->
@@ -178,7 +260,7 @@
                         <!-- ------------------------------------------------- -->
                     </div>
                     <div class="rightbtn scrollbtn">
-                        <button onclick="onClickScroll('right')"><i class="fa fa-angle-right"></i></button>
+                        <button onclick="onClickScroll('right',1)"><i class="fa fa-angle-right"></i></button>
                     </div>
                 </div>
             </section>
@@ -193,6 +275,7 @@
         <div class="right">
             <div class="head">
                 <h3>vicks vapo</h3>
+                <button onclick="handleCloseModal()"><i class="fa fa-close"></i></button>
             </div>
             <div class="content">
                 <div>
@@ -200,7 +283,6 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, excepturi harum? Dolor, autem. Non tempore dolores et quo voluptas accusantium illum quas velit a voluptatum! Sit minima perspiciatis sint? Aperiam.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, excepturi harum? Dolor, autem. Non tempore dolores et quo voluptas accusantium illum quas velit a voluptatum! Sit minima perspiciatis sint? Aperiam.</p>
                 </div>
-                <button onclick="handleCloseModal()">close</button>
 
             </div>
         </div>
